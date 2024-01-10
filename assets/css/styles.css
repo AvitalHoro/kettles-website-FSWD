@@ -317,19 +317,27 @@ img {
 }
 
 .gallery-button {
-  display: flex;
+  display: inline-block;
   justify-content: center;
-  margin-left: auto;
-  top: 100px;
+  /* margin-left: auto; */
+  top: 90px;
   position: fixed;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background-color: var(--first-color);
   color: #fff;
   border-radius: 50%;
-  font-size: 30px;
+  font-size: 50px;
   transition: background-color 0.3s ease;
-  margin-right: 10px; /* Adjust the margin as needed */
+  /* margin-right: 10px; Adjust the margin as needed */
+}
+
+.gallery-button span {
+  display: block; /* Make the span a block-level element */
+  width: 100%; /* Take up the full width of the button */
+  height: 100%; /* Take up the full height of the button */
+  line-height: 1; /* Ensure the arrow is centered vertically */
+  margin-left: 5px;
 }
 
 .gallery-button:hover {
@@ -380,57 +388,54 @@ img {
 
 /*========== MENU ==========*/
 
-.top-menu__container
-{
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-gap: 10px; /* Adjust gap as needed */
-
+.menu__top-container{
+    display: flex;
+    justify-content: space-between;
 }
 
-.menu__container {
-  grid-template-columns: repeat(1, auto); /* Add this line to specify two columns */
+.menu__container{
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
+  width: 100%;
 }
 
-.menu__content {
+.menu__content{
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: var(--container-color);
   border-radius: .5rem;
-  box-shadow: 0 2px 4px rgba(3, 74, 40, .15);
+  box-shadow: 0 2px 4px rgba(3,74,40,.15);
   padding: .75rem;
   text-align: center;
+  justify-content: center;
 
 }
 
-.menu__img {
+.menu__img{
   width: 100px;
   align-self: center;
   margin-bottom: var(--mb-2);
 }
 
-.menu__name,
-.menu__preci {
+.menu__name, .menu__preci{
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
 }
 
-.menu__name {
+.menu__name{
   font-size: var(--normal-font-size);
 }
 
-.menu__detail,
-.menu__preci {
+.menu__detail, .menu__preci{
   font-size: var(--small-font-size);
 }
 
-.menu__detail {
+.menu__detail{
   margin-bottom: var(--mb-1);
 }
 
-.menu__button {
+.menu__button{
   position: absolute;
   bottom: 0;
   right: 0;
@@ -438,6 +443,7 @@ img {
   padding: .625rem .813rem;
   border-radius: .5rem 0 .5rem 0;
 }
+
 
 /*========== APP ==========*/
 .app__data {
