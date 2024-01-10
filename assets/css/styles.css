@@ -301,8 +301,30 @@ img {
   justify-self: center;
 }
 
+.flex-contact{
+  display: flex;
+  margin-right:40px;
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+input, textarea{
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type=submit]{
+  width: 15%;
+}
+
 /*========== BUTTONS ==========*/
-.button {
+.button, input[type=submit]{
   display: inline-block;
   background-color: var(--first-color);
   color: #FFF;
@@ -312,7 +334,7 @@ img {
   margin-left: 0px;
 }
 
-.button:hover {
+.button:hover, input[type=submit]:hover{
   background-color: var(--first-color-alt);
 }
 
@@ -644,3 +666,4 @@ img {
     height: 640px;
   }
 }
+
