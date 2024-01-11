@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- <hhh></hhh> -->
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="../css/styles.css">
+
+
+    <link rel="icon" href="..\img\kettleFavicon.png" type="image/x-icon">
+    <title>הקומקומים של הדסה</title>
+</head>
+
+<body>
+
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop__icon'></i>
+    </a>
+
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="index.html" class="nav__logo">הקומקומים של הדסה</a>
+
+            <div class="nav__gallery" id="nav-gallery">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">בית</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">אודות</a></li>
+                    <li class="nav__item"><a href="gallery.html" class="nav__link">גלרייה</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link active-link">צרו קשר</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-gallery'></i>
+            </div>
+        </nav>
+    </header>
+    <main class="l-main">
+
+        <div class="flex-contact">
+            <img src="../img/logo12.png" alt="" class="contact-image">
+
+            <h1>צרו קשר</h1>
+            <p>רוצים לבוא לבקר אצלנו? אנחנו נשמח מאוד!
+                <br /> מוזמנים להשאיר פה את הפרטים שלכם וניצור אתכם קשר
+            </p>
+            <form action="submit.php" method="post">
+                <input type="text" id="name" name="name" placeholder="שם" required><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <input type="number" id="phone" name="phone" placeholder="מספר פלאפון" required><br>
+                <textarea id="comment" name="comment" placeholder="תגובה" rows="4" cols="40"></textarea><br>
+                <div id="robot"><input type="checkbox" id="not_robot" name="not_robot" value="not_robot" required>
+                    <label>אני לא רובוט</label>
+                </div>
+                <input type="submit" value="שליחה">
+            </form>
+        </div>
+    </main>
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">הקומקומים של הדסה</a>
+                <span class="footer__description">אוסף של סיפורים</span>
+                <div>
+                    <a href="https://www.facebook.com/profile.php?id=100010673148681&locale=he_IL"
+                        class="footer__social"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.pinterest.com/zipilehada/_created/" class="footer__social"><i
+                            class='bx bxl-pinterest'></i></a>
+                            <a href="https://www.instagram.com/" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                        </div>
+            </div>
+
+
+            <div class="footer__content">
+                <h3 class="footer__title">בואו לבקר אותנו</h3>
+                <ul>
+                    <li>נטע - ישראל</li>
+                    <li>רחוב כפר דרום 9</li>
+                    <li>054-7775049</li>
+                    <li>hadasazi@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2024 Reut&Avital. All right reserved</p>
+    </footer>
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

@@ -1,63 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Horizontal Layout</title>
   <style>
-    .horizontal-container {
-      /* Optional: Set a container for the divs if needed */
-      display: flex;
+    .toggle-button {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
     }
 
-    .long-div, .small-div {
-      /* Set the display to inline-block or inline */
-      display: inline-block;
+    .hidden-content {
+      display: none;
     }
 
-    /* Optional: Set widths if needed */
-    .long-div {
-      display: flex; /* Use flexbox layout */
-      background-color: lightblue;
-      width:70%
-    }
-
-    .child-div {
-      flex: 1; /* Each child div will take equal space */
-      padding: 10px; /* Optional: Add padding for spacing */
-      border: 1px solid #ccc; /* Optional: Add border for visualization */
-    }
-
-    .small-div {
-      width: 30%; /* Adjust the width as needed */
+    .hidden-content:target {
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div class="horizontal-container">
-    <div class="long-div" style="background-color: lightblue;">
-        <div class="child-div">
-            <!-- Content for the first child div -->
-            Child 1
-          </div>
-      
-          <div class="child-div">
-            <!-- Content for the second child div -->
-            Child 2
-          </div>
-      
-          <div class="child-div">
-            <!-- Content for the third child div -->
-            Child 3
-          </div>
-      <!-- Content for the long div -->
-      Long Content
-    </div>
 
-    <div class="small-div" style="background-color: lightgreen;">
-      <!-- Content for the small div -->
-      Small Content
-    </div>
+  <div class="toggle-button">
+    <a href="#toggle" onclick="return false;">Toggle Class</a>
   </div>
+
+  <div id="toggle" class="hidden-content">
+    Content to show/hide
+  </div>
+
 </body>
 </html>
