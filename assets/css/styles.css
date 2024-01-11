@@ -319,6 +319,17 @@ input, textarea{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#not_robot{
+  width: auto;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 input[type=submit]{
   width: 15%;
 }
@@ -333,6 +344,8 @@ input[type=submit]{
   transition: .3s;
   margin-left: 0px;
 }
+
+
 
 .button:hover, input[type=submit]:hover{
   background-color: var(--first-color-alt);

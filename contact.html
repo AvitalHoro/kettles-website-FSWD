@@ -14,10 +14,11 @@
         <br/> מוזמנים להשאיר פה את הפרטים שלכם וניצור אתכם קשר</p>
     <form action="submit.php" method="post">
         <input type="text" id="name" name="name" placeholder="שם" required><br>
-        <input type="text" id="address" name="address" placeholder="כתובת מגורים"><br>
         <input type="email" id="email" name="email" placeholder="Email" required><br>
         <input type="number" id="phone" name="phone" placeholder="מספר פלאפון" required><br>
-        <textarea id="comment" name="comment" placeholder="תגובה" rows="4" cols="40" required></textarea><br>
+        <textarea id="comment" name="comment" placeholder="תגובה" rows="4" cols="40"></textarea><br>
+        <div id="robot"><input type="checkbox" id="not_robot" name="not_robot" value="not_robot" required>
+            <label>אני לא רובוט</label></div>      
         <input type="submit" value="שליחה">
     </form>
     </div>
