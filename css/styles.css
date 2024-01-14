@@ -73,6 +73,23 @@ body {
   line-height: 1.6;
 }
 
+table{
+  border: 1px solid #e3e3e3;
+  width: 70%;
+  border-collapse: collapse;
+  text-align: right;
+  margin-bottom: 3%;
+}
+
+table td, th{
+  padding: 4px 8px;
+}
+
+.gallery_video{
+  margin-top:100px;
+  justify-self: center;
+}
+
 div {
   transform: translateY(50px);
   /* Move the element down by 50px initially */
@@ -383,18 +400,38 @@ img {
   margin-top: 50px;
   justify-content: center;
   font-size: var(--h3-font-size);
-
-
 }
 
 .about__img2 {
-
   width: 200px;
   border-radius: .5rem;
   justify-self: center;
-    display: block;
-    margin: 0 auto; /* Set auto margins to horizontally center the image */
+  display: block;
+  margin: 0 auto; /* Set auto margins to horizontally center the image */
 }
+
+.about_map{
+  width:600px;
+  height: 450px;
+  border: none; 
+}
+
+.about_container3 {
+  max-width: 700px; /* Adjust the maximum width as needed */
+  margin: 20px auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners for the container */
+}
+
+#about_iframe {
+  width: 100%; /* Make the iframe responsive */
+  height: 400px; /* Set a fixed height for the iframe */
+  border: none; /* Remove border around the iframe */
+  border-radius: 8px; /* Optional: Rounded corners for the iframe */
+  margin-top: 15px; /* Optional: Add some top margin */
+}
+
 
 /*========== GALLERY==========*/
 
@@ -448,9 +485,28 @@ text-align: center;}
   font-size: var(--small-font-size);
 }
 
+.image_container{
+  position: relative;
+  display: inline-block;
+}
+
+.green_kettle{
+  width: 70%;
+  position: absolute;
+  left:40%;
+}
+
+.speech_balloon{
+    position: absolute;
+    top: 50%; 
+    left: 30%; 
+    transform: translate(-50%, -50%); 
+}
+
 /*========== CONTACT ==========*/
 .contact__container {
   text-align: center;
+  margin: 7%;
 }
 
 .contact__description {
@@ -459,9 +515,9 @@ text-align: center;}
 
 .contact-image {
   position: absolute;
-  top: 50px;
-  left: 100px;
-  width: 400px
+  top: 5%;
+  left: 12%;
+  width: 30%;
 }
 
 /*========== CONTACT-PAGE ==========*/
@@ -473,7 +529,7 @@ text-align: center;}
   flex-direction: column;
 }
 
-input, textarea{
+input, textarea, select{
   width: 50%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -497,6 +553,15 @@ input, textarea{
 
 input[type=submit]{
   width: 15%;
+}
+
+.price_container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 20%;
+  margin-right: 60%;
+  width: 40%;
 }
 
 /*========== FOOTER ==========*/

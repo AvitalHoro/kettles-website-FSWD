@@ -44,21 +44,48 @@
         </nav>
     </header>
     <main class="l-main">
-
         <div class="flex-contact">
             <img src="../img/logo12.png" alt="" class="contact-image">
-
+            <div class="price_container">
+                <label dir="rtl">מחירון:</label>
+                <table name="price_table" class="price_table" dir="rtl">
+                    <tr>
+                        <th>פעילות</td>
+                        <th>מחיר</td>
+                    </tr>
+                    <tr>
+                        <td>סיור במוזיאון הקומקומים</td>
+                        <td>חינם</td>
+                    </tr>
+                    <tr>
+                        <td>סיור + יצירה</td>
+                        <td>10 ש"ח לאדם</td>
+                    </tr>
+                    <tr>
+                        <td>סיור + הרצאה</td>
+                        <td>10 ש"ח לאדם</td>
+                    </tr>
+                </table>
+                <label dir="rtl">* היצירה מתאימה לילדים ולמבוגרים כאחד, ילדים מעל גיל 4.</label>
+                <label dir="rtl">* ההרצאה מיועדת למבוגרים ונוער מעל גיל 14.</label>
+            </div>
             <h1>צרו קשר</h1>
             <p>רוצים לבוא לבקר אצלנו? אנחנו נשמח מאוד!
-                <br /> מוזמנים להשאיר פה את הפרטים שלכם וניצור אתכם קשר
+                <br /> מוזמנים להשאיר פה את הפרטים שלכם וניצור אתכם קשר:
             </p>
-            <form action="submit.php" method="post">
+            <form action="#" method="get">
                 <input type="text" id="name" name="name" placeholder="שם" required><br>
                 <input type="email" id="email" name="email" placeholder="Email" required><br>
-                <input type="number" id="phone" name="phone" placeholder="מספר פלאפון" required><br>
+                <input type="number" id="phone" name="phone" placeholder="פלאפון" required><br>
+                <select name="group-option" required>
+                    <option value="" disabled selected>בחר גודל קבוצה</option>
+                    <option value="small">משפחה (עד 15 אנשים)</option>
+                    <option value="medium">קבוצה קטנה (עד 30 אנשים) </option>
+                    <option value="large">קבוצה גדולה (עד 50 אנשים)</option>
+                </select>
                 <textarea id="comment" name="comment" placeholder="תגובה" rows="4" cols="40"></textarea><br>
                 <div id="robot"><input type="checkbox" id="not_robot" name="not_robot" value="not_robot" required>
-                    <label>אני לא רובוט</label>
+                    <label for="not_robot">אני לא רובוט</label>
                 </div>
                 <input type="submit" value="שליחה">
             </form>
@@ -76,8 +103,8 @@
                         class="footer__social"><i class='bx bxl-facebook'></i></a>
                     <a href="https://www.pinterest.com/zipilehada/_created/" class="footer__social"><i
                             class='bx bxl-pinterest'></i></a>
-                            <a href="https://www.instagram.com/" class="footer__social"><i class='bx bxl-instagram'></i></a>
-                        </div>
+                    <a href="https://www.instagram.com/" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                </div>
             </div>
 
 
