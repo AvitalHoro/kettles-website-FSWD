@@ -41,18 +41,6 @@
   --z-fixed: 100;
 }
 
-@media screen and (min-width: 768px) {
-  :root {
-    --biggest-font-size: 4rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-  }
-}
-
 /*========== BASE ==========*/
 *,
 ::before,
@@ -73,24 +61,7 @@ body {
   line-height: 1.6;
 }
 
-table{
-  border: 1px solid #e3e3e3;
-  width: 70%;
-  border-collapse: collapse;
-  text-align: right;
-  margin-bottom: 3%;
-}
-
-table td, th{
-  padding: 4px 8px;
-}
-
-.gallery_video{
-  margin-top:100px;
-  justify-self: center;
-}
-
-div {
+div{
   transform: translateY(50px);
   /* Move the element down by 50px initially */
 
@@ -181,22 +152,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-@media screen and (max-width: 768px) {
-  .nav__gallery {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    padding: 1.5rem 0 1rem;
-    text-align: center;
-    background-color: var(--body-color);
-    transition: .4s;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
-    border-radius: 0 0 1rem 1rem;
-    z-index: var(--z-fixed);
-  }
 }
 
 .nav__item {
@@ -466,7 +421,6 @@ text-align: center;}
   padding: .75rem;
   text-align: center;
   justify-content: top;
-
 }
 
 .gallery__img{
@@ -474,6 +428,11 @@ text-align: center;}
   height: 120px; /* Maintain aspect ratio */
   align-self: center;
   margin-bottom: var(--mb-2);
+}
+
+.gallery_video{
+  margin-top:100px;
+  justify-self: center;
 }
 
 .gallery__name{
@@ -513,7 +472,7 @@ text-align: center;}
   margin-bottom: var(--mb-3);
 }
 
-.contact-image {
+.contact_image {
   position: absolute;
   top: 5%;
   left: 12%;
@@ -527,6 +486,22 @@ text-align: center;}
   margin-right:40px;
   margin-top: 100px;
   flex-direction: column;
+}
+
+label{
+  display: block;
+}
+
+table{
+  border: 1px solid #e3e3e3;
+  width: 70%;
+  border-collapse: collapse;
+  text-align: right;
+  margin-bottom: 3%;
+}
+
+table td, th{
+  padding: 4px 8px;
 }
 
 input, textarea, select{
@@ -556,8 +531,6 @@ input[type=submit]{
 }
 
 .price_container{
-  display: flex;
-  flex-direction: column;
   position: absolute;
   margin-top: 20%;
   margin-right: 60%;
@@ -613,7 +586,7 @@ input[type=submit]{
 }
 
 /*========== MEDIA QUERIES ==========*/
-@media screen and (min-width: 576px) { /*these styles will be active for screens that are 576 pixels wide or wider.*/
+@media screen and (min-width: 550px) { /*these styles will be active for screens that are 576 pixels wide or wider.*/
 
   .home__container,
   .about__container {
@@ -644,7 +617,56 @@ input[type=submit]{
   }
 }
 
-@media screen and (min-width: 768px) { /*these styles will be active for screens that are 768 pixels wide or wider.*/
+@media screen and (max-width: 650px) {
+    
+  /* gallery */
+   .gallery1{
+      visibility: hidden;
+    }
+
+    .gallery3{
+      
+    }
+
+    /* contact */
+    .contact_image{
+      visibility: hidden;
+    }
+
+    .flex-contact {
+      flex-flow:column wrap;
+      align-items:center;
+      display: block;
+      width: 100%;
+  }
+
+  input, textarea, select{
+    width: 80%;
+  }
+
+  .price_container {
+      width: 80%;
+      margin-top: 0%;
+      float: right;
+      margin: 0 0;
+  }
+
+  form {
+      width: 100%;
+  }
+}
+
+@media screen and (min-width: 750px) { /*these styles will be active for screens that are 768 pixels wide or wider.*/
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+  
   body {
     margin: 0;
   }
@@ -702,9 +724,7 @@ input[type=submit]{
   .app__store {
     margin: 0 var(--mb-1) 0 0;
   }
-}
 
-@media screen and (min-width: 960px) {
   .bd-container {
     margin-left: auto;
     margin-right: auto;
@@ -720,10 +740,19 @@ input[type=submit]{
   }
 }
 
-/* For tall screens on mobiles y desktop*/
-@media screen and (min-height: 721px) {
-  .home__container {
-    height: 640px;
+@media screen and (max-width: 768px) {
+  .nav__gallery {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0 1rem;
+    text-align: center;
+    background-color: var(--body-color);
+    transition: .4s;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+    border-radius: 0 0 1rem 1rem;
+    z-index: var(--z-fixed);
   }
-}
+} 
 
