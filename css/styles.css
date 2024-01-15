@@ -223,10 +223,30 @@ img {
 
 /*========== HOME ==========*/
 .home__container {
-  width: 100%;
   align-content: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.home__data {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Set flex-direction to column */
+
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+}
+
+
+#home__button {
+
+  width: 170px;
+margin: auto;
+
+}
+
+.home__logo {
+  margin-bottom: var(--mb-4);
 }
 
 .home__title {
@@ -421,6 +441,7 @@ text-align: center;}
   padding: .75rem;
   text-align: center;
   justify-content: top;
+  min-width: 100px;
 }
 
 .gallery__img{
@@ -456,6 +477,7 @@ text-align: center;}
 }
 
 .speech_balloon{
+
     position: absolute;
     top: 50%; 
     left: 30%; 
@@ -478,6 +500,14 @@ text-align: center;}
   left: 12%;
   width: 30%;
 }
+
+.contact__img {
+  width: 80%;
+  max-width: 540px;
+  border-radius: .5rem;
+  justify-self: center;
+}
+
 
 /*========== CONTACT-PAGE ==========*/
 
@@ -594,6 +624,12 @@ input[type=submit]{
     align-items: center;
   }
 
+  .my_contact__container
+  {
+    grid-template-columns: 70% 20% 1fr;
+    align-items: center;
+  }
+
   .about__data,
   .about__initial,
   .contact__container,
@@ -607,6 +643,12 @@ input[type=submit]{
     order: -1;
   }
 
+  .contact__img
+  {
+    width: 100%;
+    order: -1;
+  }
+
   .contact__container {
     grid-template-columns: 1.75fr 1fr; /*set to have a grid layout with two columns of not-equal width*/
     align-items: center;
@@ -614,19 +656,20 @@ input[type=submit]{
 
   .contact__button {
     justify-self: center;
+    display: block;
+    position: relative;
+
   }
+
+
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
     
   /* gallery */
-   .gallery1{
-      visibility: hidden;
-    }
-
-    .gallery3{
-      
-    }
+   #gallery__hidden {
+    display: none;
+  }
 
     /* contact */
     .contact_image{
@@ -638,6 +681,10 @@ input[type=submit]{
       align-items:center;
       display: block;
       width: 100%;
+  }
+  .contact__main
+  {
+    min-height: 850px;
   }
 
   input, textarea, select{
@@ -654,6 +701,7 @@ input[type=submit]{
   form {
       width: 100%;
   }
+
 }
 
 @media screen and (min-width: 750px) { /*these styles will be active for screens that are 768 pixels wide or wider.*/
@@ -695,12 +743,6 @@ input[type=submit]{
   .change-theme {
     position: initial;
     margin-left: var(--mb-2);
-  }
-
-  .home__container {
-    height: 100vh;
-    justify-items: center;
-    text-align: center;
   }
 
   .services__container,
