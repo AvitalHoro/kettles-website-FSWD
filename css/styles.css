@@ -42,9 +42,9 @@
 }
 
 /*========== BASE ==========*/
-*,
-::before,
-::after {
+*,/*all*/
+::before,/*The first child of each element*/
+::after /*The last child of each element*/{
   box-sizing: border-box;
 }
 
